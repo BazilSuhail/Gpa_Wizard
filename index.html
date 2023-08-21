@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITU Gpa Wizard</title>
+    <!-------------------------------------------------->
+    <!--         Web Page Image                       -->
+    <!-------------------------------------------------->
+    <link rel="shortcut icon" type="x-icon" href="Image/icon_calculator.png">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-------------------------------------------------->
+    <!--         Header and Sticky NAvigationa bar    -->
+    <!-------------------------------------------------->
+    <header class="header">
+        <a href="#" class="logo"><img src="Image/Logo.png" alt=""></a>
+
+        <!-- menu icon-->
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#home" class="active">Calculator</a>
+            <a href="#criteria">Grading Criteria</a>
+        </nav>
+
+    </header>
+    <!-------------------------------------------------->
+    <!--            Calculator SEction                -->
+    <!-------------------------------------------------->
+    <section class="cal" id="home">
+        <div class="courses">
+            <h1>ITU GPA <span>Calculator</span></h1>
+            <h2><span class="multiple"></span></h2>
+            <div id="courseInputs" class="courseinputs">
+                <div>
+                    <input type="number" class="currentGPA" placeholder="Enter Current CGPA__________(optional*)">
+                    <input type="number" class="hoursEarned" placeholder="Total Credit Hours Earned___(optional*)">
+                    <input type="text" class="courseName" placeholder="Enter Course Name">
+                    <!--    seperate div    -->
+                    <div class="container">
+                        <select class="creditHours" aria-placeholder="Select Grade">
+                            <option value="0">Credit Hours</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                        </select>
+                        <select class="grade" aria-placeholder="Select Grade">
+                            <option value="0">Grade</option>
+                            <option value="4.00">A+</option>
+                            <option value="4.00">A</option>
+                            <option value="3.67">A-</option>
+                            <option value="3.33">B+</option>
+                            <option value="3.00">B</option>
+                            <option value="2.67">B-</option>
+                            <option value="2.33">C+</option>
+                            <option value="2.00">C</option>
+                            <option value="1.67">C-</option>
+                            <option value="1.33">D+</option>
+                            <option value="1.00">D</option>
+                            <option value="0.00">F</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <!-------------------------------------------------->
+            <!--            Button to add remove reset        -->
+            <!-------------------------------------------------->
+            <div class="coursebuttons">
+                <button onclick="addCourse()" class="btn">Add Course</button>
+                <button onclick="removeCourse()" class="btn">Remove Course</button>
+            </div>
+            <button onclick="resetFields()" class="btn">Reset Fields</button>
+            <button onclick="calculateGPA()" class="btn">Calculate GPA</button>
+        </div>
+    </section>
+
+    <!-------------------------------------------------->
+    <!--           GPA Calculation details and Tab    -->
+    <!-------------------------------------------------->
+    <div id="gpaTableDiv" style="display: none;" class="gpa_cal">
+        <h4 id="scrl">GPA Calculation Details</h4>
+        <table id="gpaTable" border="1">
+            <tr>
+                <th>Course name</th>
+                <th>Credit Hours</th>
+                <th>Grade</th>
+                <th>Grade Points</th>
+            </tr>
+        </table>
+        <p class="result">Total Credit Hours : <span id="sumCreditHours">-</span></p>
+        <p class="result">Total Grade Points : <span id="totalGradePoints">-</span></p>
+        <p class="result_1">SGPA :<span id="calculatedGPA">-</span></p>
+        <p class="result_1">CGPA :<span id="calculatedCGPA">-</span></p>
+    </div>
+
+    <!-------------------------------------------------->
+    <!--            Grading Criteria of UNiversity    -->
+    <!-------------------------------------------------->
+    <section class="criteria" id="criteria">
+        <h1>Grading Criteria</h1>
+        <table>
+            <tr>
+                <th>Grade</th>
+                <th>Grade Points</th>
+            </tr>
+            <tr>
+                <td>A+</td>
+                <td>4.00</td>
+            </tr>
+            <tr>
+                <td>A</td>
+                <td>4.00</td>
+            </tr>
+            <tr>
+                <td>A-</td>
+                <td>3.67</td>
+            </tr>
+            <tr>
+                <td>B+</td>
+                <td>3.33</td>
+            </tr>
+            <tr>
+                <td>B</td>
+                <td>3.00</td>
+            </tr>
+            <tr>
+                <td>B-</td>
+                <td>2.67</td>
+            </tr>
+            <tr>
+                <td>C+</td>
+                <td>2.33</td>
+            </tr>
+            <tr>
+                <td>C</td>
+                <td>2.00</td>
+            </tr>
+            <tr>
+                <td>C-</td>
+                <td>1.67</td>
+            </tr>
+            <tr>
+                <td>D+</td>
+                <td>1.33</td>
+            </tr>
+            <tr>
+                <td>D</td>
+                <td>1.00</td>
+            </tr>
+            <tr>
+                <td>F</td>
+                <td>0</td>
+            </tr>
+        </table>
+    </section>
+    <!-------------------------------------------------->
+    <!--     Animation of Menu Bar and the Typing     -->
+    <!-------------------------------------------------->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

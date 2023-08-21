@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,700&family=Roboto+Slab:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: none;
+    font-family: 'Open Sans', sans-serif;
+}
+
+:root {
+    --bg-color: rgb(19, 26, 40);
+    --text-color: #67faff;
+    --main-color: rgb(126, 242, 255);
+    --hehe: rgb(0, 0, 0);
+    --light_color: #d8feff;
+}
+
+/*==============================================================================================*/
+/*                          General styling                                                     */
+/*==============================================================================================*/
+html {
+    overflow-x: hidden;
+}
+
+body {
+    color: rgb(144, 246, 255);
+    background-image: url('Image/ITU.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+/*==============================================================================================*/
+/*                          Place holders          \                                              */
+/*==============================================================================================*/
+
+.currentGPA::placeholder,
+.hoursEarned::placeholder {
+    color: #00cad1;
+}
+
+::placeholder {
+    color: var(--light_color);
+}
+
+/*==============================================================================================*/
+/*                         Navigation and the HEADER                                            */
+/*==============================================================================================*/
+
+/* Header styles */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: .8rem 7%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header.sticky {
+    border-bottom: .1rem solid rgba(0, 0, 0, .2);
+}
+
+
+.navbar {
+    width: auto;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+}
+
+.navbar.active {
+    display: block;
+}
+
+.navbar a {
+    font-size: 19px;
+    color: rgb(0, 136, 148);
+    margin-left: 4rem;
+}
+
+.navbar a:hover {
+    color: rgb(0, 234, 255);
+    box-shadow: 0 0 1rem rgba(0, 247, 255, 0.47);
+}
+
+.navbar a.active {
+    color: rgb(98, 255, 252);
+}
+
+#menu-icon {
+    font-size: 2.2em;
+    display: none;
+}
+
+/*==============================================================================================*/
+/*                                          Courses Section                                     */
+/*==============================================================================================*/
+
+
+.courses {
+    display: grid;
+    grid-template-columns: 9fr;
+    gap: 20px;
+    padding: 9%;
+    border: 1px solid #ccc;
+    backdrop-filter: blur(21px);
+    border-radius: 10px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+}
+
+.courses h1 span {
+    color: #50c4d3;
+}
+
+.courses h1 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #b6e9f0;
+    border: 4px;
+    background-color: rgb(15, 73, 81);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 21px;
+    border: 1.5px solid rgb(193, 244, 247);
+    background-color: rgba(15, 73, 81, 0.588);
+    border-radius: 50px;
+    text-align: center;
+}
+
+.coursebuttons .btn {
+    width: 32vw;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 18px;
+    border: 3px solid #00ffee;
+    background-color: #009cb1;
+    color: var(--light_color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.coursebuttons .btn:hover {
+    box-shadow: 0 0 2rem rgba(255, 255, 255, 0.47);
+}
+
+.btn {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid var(--light_color);
+    border-radius: 20px;
+    font-size: 18px;
+    background-color: #19565e;
+    color: #d1faff;
+    box-sizing: border-box;
+}
+
+.courseinputs input,
+.courseinputs select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border: 3px solid #70fff5;
+    background-color: #03424b;
+    color: var(--light_color);
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.courseinputs .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+
+/*==============================================================================================*/
+/*                         HEader of CAlculational detaills and Criteria                        */
+/*==============================================================================================*/
+
+
+.gpa_cal h4,
+.criteria h1 {
+    text-align: center;
+    font-size: 32px;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #6ddcea;
+    background-color: #004e5aa1;
+    backdrop-filter: blur(8px);
+    border-radius: 22px;
+}
+
+/*==============================================================================================*/
+/*                          Calculational Table                                                 */
+/*==============================================================================================*/
+
+.gpa_cal {
+    display: grid;
+    grid-template-columns: 3fr;
+    gap: 20px;
+    padding: 9%;
+    border: 1px solid var(--light_color);
+    backdrop-filter: blur(21px);
+    border-radius: 10px;
+    box-shadow: 1 1 10px rgba(0, 0, 0, 0.1);
+}
+
+.result_1 {
+    text-align: center;
+    font-size: 20px;
+    padding: 9px;
+    margin-top: 10px;
+    color: #072c32;
+    background-color: #b1f5ff;
+    border-radius: 6px;
+}
+
+.result {
+    text-align: center;
+    font-size: 20px;
+    padding: 9px;
+    margin-top: 10px;
+    color: #6bebff;
+    background-color: #002c33;
+    border-radius: 6px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    backdrop-filter: blur(32px);
+}
+
+th,
+td {
+    border: 1px solid rgb(1, 60, 55);
+    color: #96fdff;
+    padding: 8px;
+    text-align: center;
+}
+
+th {
+    background-color: #8afaf696;
+    backdrop-filter: blur(31px);
+    color: #021010;
+}
+
+/*==============================================================================================*/
+/*                         Responsive - ness Section                                            */
+/*==============================================================================================*/
+
+@media (max-width:768px) {
+
+    #menu-icon {
+        height: 20%;
+        display: block;
+    }
+
+    .currentGPA::placeholder,
+    .hoursEarned::placeholder {
+        font-size: 13px;
+    }
+
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 3%;
+        background: var(--bg-color);
+        border-top: .1rem solid rgba (0, 0, 0, .2);
+        box-shadow: 0 .5rem 1rem rgba (0, 0, 0, .2);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        font-size: .9rem;
+        margin: 1.5rem 0;
+    }
+
+}
+
+@media (max-width:460px) {
+    .courses h2 {
+        font-size: 14px;
+        border: #2dc5d9;
+        border: 1.5px solid rgb(124, 248, 255);
+        background-color: rgba(15, 73, 81, 0.588);
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    .currentGPA::placeholder,
+    .hoursEarned::placeholder {
+        font-size: 13px;
+    }
+
+    .coursebuttons .btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width:435px) {
+    .courses h2 {
+        font-size: 14px;
+        border: #2dc5d9;
+        border: 1.5px solid rgb(124, 248, 255);
+        background-color: rgba(15, 73, 81, 0.588);
+        border-radius: 50px;
+        text-align: center;
+    }
+
+    .currentGPA::placeholder,
+    .hoursEarned::placeholder {
+        font-size: 13px;
+    }
+
+    .coursebuttons .btn {
+        font-size: 12px;
+    }
+}
