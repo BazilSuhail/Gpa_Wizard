@@ -59,7 +59,7 @@ I designed for my personal use as well as for my university fellows specially fo
 3. Open the index.html file in your preferred web browser.
 
 ---
-- Check out the latest demo of Project [StaySuite-Site](https://gpawizard.netlify.app/).  
+- Check out the latest demo of Project [Gpa-Wizard](https://gpawizard.netlify.app/).  
 ---
 
 ## Contributing
